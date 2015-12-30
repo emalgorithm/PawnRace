@@ -77,11 +77,12 @@ public class SquareTests {
         }
     }
 
-    private static void testOccupiedBy(Square square, Color expectedColor) {
+    public static void testOccupiedBy(Square square, Color expectedColor) {
         Color actualColor = square.occupiedBy();
         if (expectedColor != actualColor) {
             System.out.println("SquareTests: square.OccupiedBy returned " + actualColor +
-                " but the expected value was " + expectedColor);
+                " but the expected value was " + expectedColor + ", at position " +
+                square.getX() + ", " + square.getY());
         }
     }
 

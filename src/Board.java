@@ -8,6 +8,8 @@ public class Board {
     private Square[][] chessboard = new Square[side][side];
     
     public Board(char whiteGapChar, char blackGapChar) {
+        Character.toUpperCase(whiteGapChar);
+        Character.toUpperCase(blackGapChar);
         int whiteGap = whiteGapChar - 'A';
         int blackGap = blackGapChar - 'A';
         
